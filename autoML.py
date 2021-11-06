@@ -3,6 +3,7 @@ import streamlit as st
 import timeit
 import pandas as pd
 import matplotlib.pyplot as plt
+import torch
 
 from tpot import TPOTClassifier
 from sklearn.model_selection import StratifiedKFold
@@ -83,7 +84,7 @@ if __name__ == "__main__":
 			st.write(f'\n__Pipeline optimization iteration: {i}__\n')
 			st.write(f'* Elapsed time: {elapsed} seconds')
 			st.write(f'* Pipeline score on test data: {score}')
-		tpot.export(f'{output_folder}/tpot_{dataset}_pipeline_{i}.py')
+			tpot.export(f'{output_folder}/tpot_{dataset}_pipeline_{i}.py')
 
 	# check if pipelines are the same
 	result = True

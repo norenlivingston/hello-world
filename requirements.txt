@@ -3,3 +3,4 @@ matplotlib
 tpot
 sklearn
 stqdm
+torch
